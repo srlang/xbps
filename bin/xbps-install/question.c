@@ -79,9 +79,9 @@ question(bool preset, const char *fmt, va_list ap)
 		if (strlen(response) == 0)
 			return preset;
 
-		if (strcasecmp(response, "yes") == 0)
+		if (strcasecmp(response, "yes") == 0 || strcasecmp(response, "y") == 0)
 			return true;
-		else if (strcasecmp(response, "no") == 0)
+		else if (strcasecmp(response, "no") == 0 || strcasecmp(response, "n") == 0)
 			return false;
 	}
 	return false;
